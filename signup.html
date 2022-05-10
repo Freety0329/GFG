@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html class="bgcolor font">
+<head><link rel="shortcut icon" type="emoji" href="assets/logo.jpg"/> 
+    <link href="css/signup.css" rel="stylesheet" type="text/css" />
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="alignment">
+    <br>
+    <br>
+    <br>
+    <div class="blur-box">
+    <center>Create Your Account</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method = "POST" action="signup.php">
+        <table class = "TableCenter" cellpadding="0" cellspacing="5">
+            <tr>
+                <th align ="left">First Name:</th>
+                <th align = "left">Last Name:</th>
+            </tr>
+            <tr>   
+                <td><input type = "text" name = "FName" required = "required"></td>
+                <td><input type = "text" name = "LName" ></td>
+            </tr>
+            <tr>
+                <th colspan = "2" align = "left">Email Address:</th>
+            </tr>
+            <tr>
+                <td colspan = "2"><input class = "FTextbox" type = "email" name = "Email" required = "required"></td>
+            </tr>
+            <tr>
+                <th colspan="2" align="left">Phone Number:</th>
+            </tr>
+            <tr>
+                <td colspan="2"><input class="FTextbox" type="tel" name="Phone" required="required" placeholder="0123456789" pattern="[0-9]{10,12}"></td>
+            </tr>
+            <tr>
+                <th colspan = "2" align="left">Bank Card Number:</th>
+            </tr>
+            <tr>
+                <td colspan = "2"><input class = "FTextbox" type = "text" name = "Bank_Card_No" minlength="16" maxlength="16" required = "required"></td>
+            </tr>
+            <tr>
+                <th colspan = "2" align = "left">Password:</th>  
+            </tr>
+            <tr>
+                <td colspan = "2"><input class = "FTextbox" type = "password" name = "password" id = "password" required = "required"></td>
+            </tr>
+            <tr>
+                <th colspan = "2" align = "left">Confirm Password:</th>
+            </tr>
+            <tr>
+                <td colspan = "2"><input class = "FTextbox" type = "password" name = "c_password" id = "c_password" required = "required" onchange="checkPass();"></td>
+            </tr>
+            <tr>
+                <th colspan = "2" align = "left">Delivery Address:</th>
+            </tr>
+            <tr>
+                <td colspan = "2"><input class = "FTextbox" type = "text" name = "Address_1" required = "required" placeholder = "Address line 1"></td>
+            </tr>
+            <tr>
+                <td colspan = "2"><input class = "FTextbox" type = "text" name = "Address_2"  placeholder = "Address line 2"></td>
+            </tr>
+            <tr>
+                <td><input type = "postal" name = "zipcode" required = "required" placeholder = "ZIP Code" pattern="[0-9]{5}"></td> 
+                <td align="center">
+                    <select name = "State" required = "required" value = "State:">
+                        <option value = "">Please Select</option>
+                        <option value="Johor">Johor</option>
+                        <option value="Kedah">Kedah</option>
+                        <option value="Kelantan">Kelantan</option>
+                        <option value="Kuala Lumpur">Kuala Lumpur</option>
+                        <option value="Labuan">Labuan</option>
+                        <option value="Melaka">Melaka</option>
+                        <option value="Negeri Sembilan">Negeri Sembilan</option>
+                        <option value="Pahang">Pahang</option>
+                        <option value="Penang">Penang</option>
+                        <option value="Perak">Perak</option>
+                        <option value="Perlis">Perlis</option>
+                        <option value="Putrajaya">Putrajaya</option>
+                        <option value="Sabah">Sabah</option>
+                        <option value="Sarawak">Sarawak</option>
+                        <option value="Selangor">Selangor</option>
+                        <option value="Terengganu">Terengganu</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br><br><br>
+                </td>
+            </tr>
+            <td align = "right"><input style = "width :90px" type = "button" value = "Back" onclick="history.back()"></td>
+            <td align = "left"><input style = "width :90px" type = "submit" id = "submit" value = "Create" onclick="checkPass();"></td>
+        
+        </table>
+    </form>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
+
